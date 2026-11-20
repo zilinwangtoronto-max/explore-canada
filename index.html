@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="An illustrated travel guide to Banff National Park, Niagara Falls, and Québec City.">
+  <meta name="description" content="A travel guide to Banff National Park, Niagara Falls, and Québec City.">
   <title>Explore Canada | Three Places to Visit</title>
   <style>
     :root { color-scheme: light; --ink: #192d29; --green: #143d35; --paper: #f8f5ec; }
@@ -26,7 +26,8 @@
     h3 { font-size: 1.55rem; margin-bottom: .65rem; }
     .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr)); gap: 1.25rem; margin-top: 1.5rem; }
     article { background: #fffdf7; border: 1px solid #d8d6ca; border-radius: .6rem; overflow: hidden; }
-    img { display: block; width: 100%; height: auto; }
+    img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; }
+    .card-text .credit { margin-top: .85rem; font-size: .8rem; }
     .card-text { padding: 1.25rem; }
     .card-text p { margin: 0; }
     .province { color: #3a6254; font-size: .85rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
@@ -55,27 +56,30 @@
       <h2 id="destinations-heading">Where to go</h2>
       <div class="cards">
         <article>
-          <img src="images/banff.svg" width="800" height="500" alt="Snow-capped peaks and dark green pines surround a turquoise lake.">
+          <img src="images/moraine.webp" width="900" height="583" alt="Turquoise Moraine Lake below rocky peaks and evergreen forest in Banff National Park.">
           <div class="card-text">
             <p class="province">Alberta</p>
             <h3>Banff National Park</h3>
             <p>Explore the Canadian Rockies from Banff, with time for a lakeside walk and a mountain viewpoint.</p>
+            <p class="credit">Photo by <a href="https://commons.wikimedia.org/wiki/File:LakeMoraine.jpg">Steffen Sledz</a> · <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a> · resized and cropped for display</p>
           </div>
         </article>
         <article>
-          <img src="images/niagara.svg" width="800" height="500" alt="A broad white waterfall drops into mist above the blue Niagara River.">
+          <img src="images/niagara.webp" width="900" height="675" alt="Horseshoe Falls curves across the Niagara River, with mist rising from the base.">
           <div class="card-text">
             <p class="province">Ontario</p>
             <h3>Niagara Falls</h3>
             <p>Follow the riverfront promenade for different views of the falls, then pause where you can hear the water.</p>
+            <p class="credit">Photo by <a href="https://commons.wikimedia.org/wiki/File:Horseshoefalls.jpg">Robincross224</a> · <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a> · resized and cropped for display</p>
           </div>
         </article>
         <article>
-          <img src="images/quebec.svg" width="800" height="500" alt="Three pastel buildings with steep roofs face a stone street in Old Québec.">
+          <img src="images/quebec.webp" width="900" height="675" alt="Pedestrians walk between storefronts on Rue du Petit-Champlain in Old Québec.">
           <div class="card-text">
             <p class="province">Québec</p>
             <h3>Québec City</h3>
             <p>Spend an afternoon on foot exploring Old Québec’s narrow streets and historic buildings.</p>
+            <p class="credit">Photo by <a href="https://commons.wikimedia.org/wiki/File:Rue_du_Petit-Champlain_in_Quebec_City,_a_pedestrian_shopping_street.jpg">Magpieturtle</a> · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · resized and cropped for display</p>
           </div>
         </article>
       </div>
