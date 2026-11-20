@@ -1,75 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Discover three beautiful destinations in Canada: Banff, Niagara Falls, and Quebec City.">
-  <title>Explore Canada | Three Beautiful Destinations</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="An illustrated travel guide to Banff National Park, Niagara Falls, and Québec City.">
+  <title>Explore Canada | Three Places to Visit</title>
   <style>
+    :root { color-scheme: light; --ink: #192d29; --green: #143d35; --paper: #f8f5ec; }
     * { box-sizing: border-box; }
-    body { margin: 0; font-family: Arial, Helvetica, sans-serif; color: #20333b; background: #f4f8f7; line-height: 1.6; }
-    header { background: #174e56; color: white; text-align: center; padding: 56px 20px; }
-    header h1 { font-size: 2.5rem; margin: 0 0 10px; }
-    header p { margin: 0; font-size: 1.1rem; }
-    nav { background: #103b42; text-align: center; padding: 13px; }
-    nav a { color: white; margin: 0 14px; text-decoration: underline; }
-    nav a:focus-visible, a:focus-visible { outline: 3px solid #ffb84d; outline-offset: 3px; }
-    main { max-width: 980px; margin: 36px auto; padding: 0 20px; }
-    .intro { text-align: center; margin-bottom: 30px; }
-    .intro h2 { color: #174e56; }
-    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 22px; }
-    article { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(20,50,60,.10); }
-    article img { display: block; width: 100%; height: 210px; object-fit: cover; }
-    .card-content { padding: 20px; }
-    h3 { color: #174e56; margin: 0 0 8px; }
-    .tips { background: #e5f0ec; padding: 24px 30px; border-radius: 12px; margin-top: 34px; }
-    .tips h2 { margin-top: 0; color: #174e56; }
-    a { color: #075e70; }
-    footer { text-align: center; background: #174e56; color: white; padding: 20px; margin-top: 40px; }
-    footer a { color: white; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font: 1rem/1.65 system-ui, sans-serif; }
+    .wrap { width: min(72rem, calc(100% - 2rem)); margin-inline: auto; }
+    a { color: #17564a; text-underline-offset: .24em; }
+    a:focus-visible { outline: .18rem solid currentColor; outline-offset: .28rem; }
+    .skip { position: absolute; left: 1rem; top: 1rem; z-index: 1; background: white; padding: .5rem 1rem; }
+    .skip:not(:focus) { clip-path: inset(50%); }
+    header { background: var(--green); color: #fff9e9; }
+    nav { display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; padding-block: 1.25rem; border-bottom: 1px solid #71948a; }
+    header a { color: inherit; }
+    .hero { padding-block: clamp(2.5rem, 8vw, 6.5rem); }
+    h1, h2, h3 { font-family: Georgia, serif; line-height: 1.1; margin: 0; }
+    h1 { font-size: clamp(3rem, 9vw, 7.5rem); letter-spacing: -.045em; }
+    .hero p { max-width: 42ch; margin-bottom: 0; font-size: clamp(1.1rem, 2.4vw, 1.45rem); }
+    main { padding-block: 3.5rem; }
+    h2 { font-size: clamp(2rem, 5vw, 3.25rem); }
+    h3 { font-size: 1.55rem; margin-bottom: .65rem; }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr)); gap: 1.25rem; margin-top: 1.5rem; }
+    article { background: #fffdf7; border: 1px solid #d8d6ca; border-radius: .6rem; overflow: hidden; }
+    img { display: block; width: 100%; height: auto; }
+    .card-text { padding: 1.25rem; }
+    .card-text p { margin: 0; }
+    .province { color: #3a6254; font-size: .85rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+    .card-text .province { margin-bottom: .55rem; }
+    .checklist { margin-top: 3rem; padding: clamp(1.25rem, 4vw, 2.5rem); border-radius: .6rem; background: #e5eee3; }
+    li + li { margin-top: .35rem; }
+    footer { border-top: 1px solid #d8d6ca; padding-block: 1rem; }
   </style>
 </head>
 <body>
+  <a class="skip" href="#main-content">Skip to main content</a>
   <header>
-    <h1>Explore Canada</h1>
-    <p>Three beautiful destinations worth discovering</p>
+    <div class="wrap">
+      <nav aria-label="Page navigation">
+        <a href="#destinations">Destinations</a>
+        <a href="#travel-checklist">Travel checklist</a>
+      </nav>
+      <div class="hero">
+        <h1>Explore Canada</h1>
+        <p>Three places to experience Canada’s mountain lakes, waterfalls, and historic streets.</p>
+      </div>
+    </div>
   </header>
-  <nav aria-label="Main navigation">
-    <a href="#destinations">Destinations</a>
-    <a href="#travel-tips">Travel Tips</a>
-  </nav>
-  <main>
-    <section class="intro" aria-labelledby="welcome-heading">
-      <h2 id="welcome-heading">Discover the Beauty of Canada</h2>
-      <p>From mountain lakes to powerful waterfalls and historic streets, Canada offers something for every traveler. Here are three places I would love to explore.</p>
-    </section>
+  <main class="wrap" id="main-content">
     <section id="destinations" aria-labelledby="destinations-heading">
-      <h2 id="destinations-heading">Featured Destinations</h2>
+      <h2 id="destinations-heading">Where to go</h2>
       <div class="cards">
         <article>
-          <img src="images/banff.svg" alt="Illustration of turquoise mountain lake surrounded by pine trees and snowy peaks in Banff">
-          <div class="card-content"><h3>Banff National Park</h3><p>Located in Alberta, Banff is known for its dramatic Rocky Mountain scenery, clear blue lakes, and outdoor adventures.</p></div>
+          <img src="images/banff.svg" width="800" height="500" alt="Snow-capped peaks and dark green pines surround a turquoise lake.">
+          <div class="card-text">
+            <p class="province">Alberta</p>
+            <h3>Banff National Park</h3>
+            <p>Explore the Canadian Rockies from Banff, with time for a lakeside walk and a mountain viewpoint.</p>
+          </div>
         </article>
         <article>
-          <img src="images/niagara.svg" alt="Illustration of a wide waterfall cascading into a misty river at Niagara Falls">
-          <div class="card-content"><h3>Niagara Falls</h3><p>On the border of Ontario and New York, Niagara Falls offers breathtaking views of one of North America's most famous waterfalls.</p></div>
+          <img src="images/niagara.svg" width="800" height="500" alt="A broad white waterfall drops into mist above the blue Niagara River.">
+          <div class="card-text">
+            <p class="province">Ontario</p>
+            <h3>Niagara Falls</h3>
+            <p>Follow the riverfront promenade for different views of the falls, then pause where you can hear the water.</p>
+          </div>
         </article>
         <article>
-          <img src="images/quebec.svg" alt="Illustration of historic Quebec City buildings with colorful rooftops and a stone street">
-          <div class="card-content"><h3>Quebec City</h3><p>Quebec City is famous for its charming Old Town, historic architecture, and distinctive French-Canadian culture.</p></div>
+          <img src="images/quebec.svg" width="800" height="500" alt="Three pastel buildings with steep roofs face a stone street in Old Québec.">
+          <div class="card-text">
+            <p class="province">Québec</p>
+            <h3>Québec City</h3>
+            <p>Spend an afternoon on foot exploring Old Québec’s narrow streets and historic buildings.</p>
+          </div>
         </article>
       </div>
     </section>
-    <section class="tips" id="travel-tips" aria-labelledby="tips-heading">
-      <h2 id="tips-heading">My Travel Checklist</h2>
+    <section class="checklist" id="travel-checklist" aria-labelledby="checklist-heading">
+      <h2 id="checklist-heading">Before you go</h2>
       <ul>
-        <li>Check the weather before leaving.</li>
-        <li>Bring a camera to capture memorable views.</li>
-        <li>Research local attractions and transportation.</li>
+        <li>Check the local forecast and pack for changing weather.</li>
+        <li>Look up transit routes or parking near your first stop.</li>
+        <li>Check opening hours and reserve timed entry where needed.</li>
       </ul>
-      <p>For more travel ideas, visit the <a href="https://travel.destinationcanada.com/en-ca" target="_blank" rel="noopener noreferrer">Destination Canada travel website</a>.</p>
+      <p>Find more trip ideas from <a href="https://travel.destinationcanada.com/en-ca">Destination Canada</a>.</p>
     </section>
   </main>
-  <footer><p>Explore Canada | HTML5 Final Project</p></footer>
+  <footer>
+    <p class="wrap">Explore Canada · HTML5 Final Project</p>
+  </footer>
 </body>
 </html>
